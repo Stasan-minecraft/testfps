@@ -491,7 +491,7 @@ function postCardHtml(post) {
 async function toggleLike(postId) {
   if (!currentUser) { router.go('login'); return; }
   const card = document.getElementById(`post-${postId}`);
-  const btn = card.querySelector('.post-action-btn');
+  const btn = card.querySelector('.post-actions .post-action-btn');
   const isLiked = btn.classList.contains('liked');
   try {
     if (isLiked) {
